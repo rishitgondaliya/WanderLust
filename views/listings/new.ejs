@@ -1,0 +1,75 @@
+<% layout("layouts/boilerplate.ejs") %>
+<body>
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h2 class="mt-3 mb-3">Create a new listing</h2>
+      <form action="/listings" method="POST" class="mb-3 new-form">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="listing[title]"
+            placeholder="enter title"
+            class="form-control"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description:</label>
+          <textarea
+            type="text"
+            id="description"
+            name="listing[description]"
+            class="form-control"
+          >Write short description...</textarea
+          >
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Image URL:</label>
+          <input
+            type="text"
+            id="image"
+            name="listing[image]"
+            class="form-control"
+            placeholder="enter image url"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price:</label>
+          <input
+            type="number"
+            id="price"
+            name="listing[price]"
+            placeholder="enter price"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <div class="mb-3 col-6">
+            <label for="location" class="form-label">Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="listing[location]"
+              placeholder="enter location"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3 col-6">
+            <label for="country" class="form-label">Country:</label>
+            <input
+              type="text"
+              id="country"
+              name="listing[country]"
+              placeholder="enter country"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary mb-3 mt-3">Add Listing</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
